@@ -13,7 +13,7 @@ export default function Home({products}) {
       <Header />
       {/* max-w-screen-2xl mx-auto  */}
    
-      <main className="max-w-6xl mx-auto">
+      <main className="max-w-6xl mx-auto mt-5">
   
         <Banner/>
         <ProductFeed products={products}/>

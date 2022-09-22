@@ -70,13 +70,14 @@ function Header() {
             <Menu className="h-6 mr-1" />
             ALL
           </p>
-          <p className="link ">Prime</p>
+          <p className="link ">Prime videos</p>
           <p className="link">Business</p>
           <p className="link">Gadgets</p>
           <p className="link hidden lg:inline-flex">Fashion</p>
           <p className="link hidden lg:inline-flex">Electronics</p>
-          <p className="link hidden lg:inline-flex">Transport</p>
-          <p className="link hidden lg:inline-flex">Sports</p>
+          <p className="link hidden lg:inline-flex">Tech</p>
+          <a href="https://www.premierleague.com/"><p className="link hidden lg:inline-flex">Sports</p></a>
+          
 
         </div>
     </header>

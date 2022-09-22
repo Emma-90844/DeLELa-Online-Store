@@ -15,16 +15,17 @@ function Banner() {
         interval={4000}
       >
         {/* add in the divs for the images */}
+       
 
         <div>
-          <img loading="lazy" src="https://links.papareact.com/6ff" alt="" />
+          <img loading="lazy" className="rounded-3xl" src="https://links.papareact.com/6ff" alt="" />
         </div>
 
         <div>
-          <img loading="lazy" src="https://links.papareact.com/7ma" />
+          <img loading="lazy" className="rounded-3xl" src="https://links.papareact.com/7ma" />
         </div>
         <div>
-          <img loading="lazy" src="https://links.papareact.com/gi1" alt="" />
+          <img loading="lazy" className="rounded-3xl" src="https://links.papareact.com/gi1" alt="" />
         </div>
       </Carousel>
     </div>
