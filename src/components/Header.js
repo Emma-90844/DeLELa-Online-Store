@@ -5,6 +5,7 @@ import {Menu} from 'heroicons-react'
 import {ShoppingCart} from 'heroicons-react'
 import {User} from 'heroicons-react'
 import {Wifi} from 'heroicons-react'
+import { signIn, signOut, useSession } from "next-auth/react"
 
 
 
@@ -36,7 +37,7 @@ function Header() {
 
         {/* RIGHT HEADER*/}
         <div className="text-white flex items-center text-xs space-x-6 mx-6">
-          <div className="link">
+          <div onClick={signIn} className="link cursor-pointer" >
             <p className="flex items-center ">
               {" "}
               <span>
