@@ -7,19 +7,21 @@ import {User} from 'heroicons-react'
 import {Wifi} from 'heroicons-react'
 import {signIn, signOut, useSession} from "next-auth/react"
 
-
+// Next Js inbuilt Router
+import { useRouter } from "next/router"
 
 
 function Header() {
   // NextAuth session
 const { data: session } = useSession();
+const router = useRouter()
   
   return (
     <header>
       {/* LEFT HEADER AND SEARCH */}
       <div className="flex flex-grow item-center bg-dax_blue p-1  py-2 ">
         <div className=" flex  flex-grow  items-center sm:flex-grow-0 ">
-          <span className="text-green-300 mr-5 text-2xl   ">
+          <span onClick={() => router.push('/')} className="text-green-300 mr-5 text-2xl   ">
             <b className="ml-5 flex sm:text-sm items-center">DiLELa <span className="hidden sm:flex  text-center items-center "><Wifi/> <b className="hidden sm:flex">Store</b></span></b>
           </span>
         </div>
