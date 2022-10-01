@@ -5,12 +5,15 @@ import {Menu} from 'heroicons-react'
 import {ShoppingCart} from 'heroicons-react'
 import {User} from 'heroicons-react'
 import {Wifi} from 'heroicons-react'
-import { signIn, signOut, useSession } from "next-auth/react"
+import {signIn, signOut, useSession} from "next-auth/react"
 
 
 
 
 function Header() {
+  // NextAuth session
+const { data: session } = useSession();
+  
   return (
     <header>
       {/* LEFT HEADER AND SEARCH */}
@@ -19,10 +22,6 @@ function Header() {
           <span className="text-green-300 mr-5 text-2xl   ">
             <b className="ml-5 flex sm:text-sm items-center">DiLELa <span className="hidden sm:flex  text-center items-center "><Wifi/> <b className="hidden sm:flex">Store</b></span></b>
           </span>
-          {/* <span className="rounded-full ml-2 h-5 w-5 bg-green-500 "></span>{" "} */}
-          {/* <span className="text-green-300 text-2xl mr-5">
-            <b>Store</b>
-          </span> */}
         </div>
         
 
@@ -37,15 +36,17 @@ function Header() {
 
         {/* RIGHT HEADER*/}
         <div className="text-white flex items-center text-xs space-x-6 mx-6">
-          <div onClick={signIn} className="link cursor-pointer" >
-            <p className="flex items-center ">
+          <div onClick={!session ? signIn : signOut} className="link cursor-pointer" >
+            <p className="  flex items-center ">
               {" "}
               <span>
                 <User className="h-3  text-green-400" />
               </span>
-              Thadius Alimo
+              <p className=""> {session ? ` ${session.user.name}` : 'sign in'}</p>
+
+            
             </p>
-            <p className="font-extrabold hidden sm:flex  pl-6 md:text-small">Account-Lssts</p>
+            <p className="font-extrabold hidden sm:flex  pl-6 md:text-small"><b>Account-Lists</b></p>
           </div>
 
           <div className="link">
