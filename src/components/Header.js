@@ -21,7 +21,7 @@ const router = useRouter()
       {/* LEFT HEADER AND SEARCH */}
       <div className="flex flex-grow item-center bg-dax_blue p-1  py-2 ">
         <div className=" flex  flex-grow  items-center sm:flex-grow-0 ">
-          <span onClick={() => router.push('/')} className="text-green-300 mr-5 text-2xl   ">
+          <span onClick={() => router.push('/')} className="text-green-300 mr-5 text-2xl cursor-pointer border- ">
             <b className="ml-5 flex sm:text-sm items-center">DiLELa <span className="hidden sm:flex  text-center items-center "><Wifi/> <b className="hidden sm:flex">Store</b></span></b>
           </span>
         </div>
@@ -55,7 +55,9 @@ const router = useRouter()
             <p>Returns</p>
             <p className="font-extrabold md:text-small">Orders</p>
           </div>
-          <div className="relative link flex items-center">
+
+          {/* Basket  */}
+          <div onClick={() => router.push("/checkout") } className="relative link flex items-center">
             <span className="absolute  top-0 right-0 md:right-10 text-dax_blue bg-yellow-500 rounded-full h-4 w-4 text-center font-bold ">
               0
             </span>
