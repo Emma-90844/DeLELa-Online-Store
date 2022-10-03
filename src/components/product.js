@@ -30,6 +30,8 @@ function Product({ id, title, price, description, category, image }) {
       description,
       category,
       image,
+      hasPrime,
+      rating
     };
 
     // sending items to the redux store
@@ -61,7 +63,7 @@ function Product({ id, title, price, description, category, image }) {
       {hasPrime && (
         <div className="flex items-center space-x-2 mt-5">
           <img
-            className="w-12 h-5"
+            className="w-12 h-5xl"
             src="https://links.papareact.com/fdw"
             alt=""
           />
